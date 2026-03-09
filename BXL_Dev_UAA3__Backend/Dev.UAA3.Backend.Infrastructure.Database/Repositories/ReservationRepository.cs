@@ -48,7 +48,7 @@ namespace Dev.UAA3.Backend.Infrastructure.Database.Repositories
             EntityEntry<Reservation> element = _dbContext.Reservations.Add(reservation);
             _dbContext.SaveChanges();
 
-            return GetById(element.Entity.Id) ?? throw new DbUpdateException();
+            return GetById(element.Entity.Id) ?? throw new DbUpdateException(); //? Pq pas juste element.Entity ?
         }
 
         public bool Delete(int reservationId)

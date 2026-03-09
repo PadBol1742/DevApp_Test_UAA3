@@ -1,5 +1,7 @@
 ﻿using Dev.UAA3.Backend.Domain.Models;
 
+//! Pourquoi dans le domain au lieu du dossier "Interfaces" de l'App Core ?
+
 namespace Dev.UAA3.Backend.Domain.Services
 {
     public interface IReservationService
