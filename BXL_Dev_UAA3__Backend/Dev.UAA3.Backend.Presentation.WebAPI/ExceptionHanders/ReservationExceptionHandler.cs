@@ -17,6 +17,9 @@ namespace Dev.UAA3.Backend.Presentation.WebAPI.ExceptionHanders
                 case ReservationAlreadyExistsException:
                     statusCode = StatusCodes.Status409Conflict;
                     break;
+                case ReservationRoomNotAvalaibleException:
+                    statusCode = StatusCodes.Status409Conflict;
+                    break;
                 case ReservationNotFoundException:
                     statusCode = StatusCodes.Status404NotFound;
                     break;
