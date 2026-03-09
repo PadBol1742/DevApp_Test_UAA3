@@ -2,6 +2,9 @@ import { Suspense, use, useState, useTransition } from 'react';
 import { cancelReservation, getMyReservations } from '../../services/reservation.service.js';
 import { toast } from 'sonner';
 
+//! Problème de refresh à trouver dans 'RefreshReservations' ou 'handleCancel' ou 'startTransition'
+//? Nb. le BE renvoie 204 pour delete et ici on attend un 'result'.room.name', il y a qq'ch de pas cohérent là déjà 
+
 export default function ReservationListPage() {
 
   const [promise, setPromise] = useState(() => getMyReservations());

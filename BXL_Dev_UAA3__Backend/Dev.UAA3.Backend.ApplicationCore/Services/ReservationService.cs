@@ -15,6 +15,7 @@ namespace Dev.UAA3.Backend.ApplicationCore.Services
             _roomRepository = roomRepository;
         }
 
+        //! Il manque ici une guarde pour vérifier si la room est disponible !!!
         public Reservation Create(Reservation reservation)
         {
             if (_reservationRepository.CheckReservationExists(reservation))
