@@ -34,6 +34,12 @@ namespace Dev.UAA3.Backend.Infrastructure.Database.Repositories
                         .ToList();
         }
 
+        public bool CheckRoomOccupationAtDate(Reservation reservation)
+        {
+            return _dbContext.Reservations.Any(r => r.DateReserved == reservation.DateReserved
+                    && r.RoomId == reservation.RoomId);
+        }
+
         public bool CheckReservationExists(Reservation reservation)
         {
             return _dbContext.Reservations.Any(r => r.Name == reservation.Name
@@ -48,7 +54,7 @@ namespace Dev.UAA3.Backend.Infrastructure.Database.Repositories
             EntityEntry<Reservation> element = _dbContext.Reservations.Add(reservation);
             _dbContext.SaveChanges();
 
-            return GetById(element.Entity.Id) ?? throw new DbUpdateException();
+            return GetById(element.Entity.Id) ?? throw new DbUpdateException(); //? Pq pas juste element.Entity ?
         }
 
         public bool Delete(int reservationId)

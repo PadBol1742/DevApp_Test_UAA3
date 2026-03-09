@@ -14,11 +14,15 @@ namespace Dev.UAA3.Backend.ApplicationCore.Services
             _reservationRepository = reservationRepository;
             _roomRepository = roomRepository;
         }
-
+                
         public Reservation Create(Reservation reservation)
         {
             if (_reservationRepository.CheckReservationExists(reservation))
                 throw new ReservationAlreadyExistsException();
+
+            // On Vérifie si la salle demandée est déjà occupée à la date demandée.
+            if (_reservationRepository.CheckRoomOccupationAtDate(reservation))
+                throw new ReservationRoomNotAvalaibleException();
 
             return _reservationRepository.Insert(reservation);
         }

@@ -1,5 +1,6 @@
 ﻿namespace Dev.UAA3.Backend.Domain.Models
 {
+
     public class Reservation
     {
         public int Id { get; set; }

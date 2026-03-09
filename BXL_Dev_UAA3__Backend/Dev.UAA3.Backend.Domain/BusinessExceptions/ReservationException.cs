@@ -7,6 +7,12 @@
         { }
     }
 
+    public class ReservationRoomNotAvalaibleException : ReservationException
+    {
+        public ReservationRoomNotAvalaibleException()
+            : base ("That room is not available on that date !")
+        { }
+    }
     public class ReservationAlreadyExistsException : ReservationException
     {
         public ReservationAlreadyExistsException()

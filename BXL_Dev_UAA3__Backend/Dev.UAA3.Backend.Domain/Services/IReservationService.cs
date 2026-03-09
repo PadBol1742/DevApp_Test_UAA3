@@ -1,5 +1,8 @@
 ﻿using Dev.UAA3.Backend.Domain.Models;
 
+//! Pourquoi dans le domain au lieu du dossier "Interfaces" de l'App Core ?
+// TODO : Bouger au bon endroit et rétablis ttes les connections
+
 namespace Dev.UAA3.Backend.Domain.Services
 {
     public interface IReservationService

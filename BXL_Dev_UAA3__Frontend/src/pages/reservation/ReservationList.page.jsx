@@ -2,6 +2,7 @@ import { Suspense, use, useState, useTransition } from 'react';
 import { cancelReservation, getMyReservations } from '../../services/reservation.service.js';
 import { toast } from 'sonner';
 
+
 export default function ReservationListPage() {
 
   const [promise, setPromise] = useState(() => getMyReservations());
@@ -29,7 +30,7 @@ function ReservationListPageInner({ reservationPromise, onCancel }) {
 
     startTransition(() => {
       onCancel();
-      toast(`Reservation supprimée pour la salle ${result.room.name}`);;
+      toast(`Reservation supprimée !`);;
     });
   };
 
