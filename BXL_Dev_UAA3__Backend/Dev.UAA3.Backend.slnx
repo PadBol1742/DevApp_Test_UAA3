@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/ApplicationCore/">
+    <Project Path="Dev.UAA3.Backend.ApplicationCore/Dev.UAA3.Backend.ApplicationCore.csproj" Id="56d20baf-5aa2-4a4a-9205-79a3da94471a" />
+  </Folder>
+  <Folder Name="/Domain/">
+    <Project Path="Dev.UAA3.Backend.Domain/Dev.UAA3.Backend.Domain.csproj" Id="b2efe2cf-336a-455d-bd38-5b00ddd45fb7" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="Dev.UAA3.Backend.Infrastructure.Database/Dev.UAA3.Backend.Infrastructure.Database.csproj" Id="8de08b57-5072-4ecb-87d0-16f6b37d66c1" />
+  </Folder>
+  <Folder Name="/Presentation/">
+    <Project Path="Dev.UAA3.Backend.Presentation.WebAPI/Dev.UAA3.Backend.Presentation.WebAPI.csproj" Id="605841f4-068e-4cdc-b53b-297601bfb217" />
+  </Folder>
+</Solution>
