@@ -34,6 +34,12 @@ namespace Dev.UAA3.Backend.Infrastructure.Database.Repositories
                         .ToList();
         }
 
+        public bool CheckRoomOccupationAtDate(Reservation reservation)
+        {
+            return _dbContext.Reservations.Any(r => r.DateReserved == reservation.DateReserved
+                    && r.RoomId == reservation.RoomId);
+        }
+
         public bool CheckReservationExists(Reservation reservation)
         {
             return _dbContext.Reservations.Any(r => r.Name == reservation.Name

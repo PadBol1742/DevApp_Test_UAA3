@@ -1,11 +1,5 @@
 ﻿namespace Dev.UAA3.Backend.Domain.Models
 {
-    //! Problèmes :
-    //! - Redondance entre entités et id d'entité
-    //! - Confusion entre member et memberId dans le constructeur de réservation
-    //! - Idem pour room
-    //! - Absence du param EndDate
-    //! - (nom du param "DateReserved" pas clair, = date où la résé a été faite ou date où la salle est bloquée ? Pas cohérent avec période. => StartDate ?
 
     public class Reservation
     {

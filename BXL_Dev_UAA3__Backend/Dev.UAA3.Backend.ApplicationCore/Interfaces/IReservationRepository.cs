@@ -7,6 +7,7 @@ namespace Dev.UAA3.Backend.ApplicationCore.Interfaces
     {
         Reservation? GetById(int reservationId);
         IEnumerable<Reservation> GetByFilter(Expression<Func<Reservation, bool>> filter);
+        bool CheckRoomOccupationAtDate(Reservation reservation);
         bool CheckReservationExists(Reservation reservation);
         Reservation Insert(Reservation reservation);
         bool Delete(int reservationId);
